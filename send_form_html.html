@@ -1,20 +1,26 @@
-<form method="post" id="smsFrm" name="smsFrm">
-    <input type="hidden" value="ss" id="ssaction" name="ssaction">
-    <input type="hidden" value="####" id="Token" name="Token" />  <!-- Token is 37 character long -->
-    
+<form method="post" id="smsFrm" name="smsFrm" action="sendsms.php">
     <div class="Sms fl">
+		 <label>Way2Sms Registered 10 Digit Mobile No</label><br/>
+        <div class="m91">
+            <input type="number" id="uid" name="uid"  /><br/>
+        </div>
+            
+        <label>password- 4 digit PIN</label><br/>
+        <input type="password" id="pwd" name="pwd"/><br><br/><br/>
+						
         <label>Mobile Number</label>
         <div class="m91">
             <span>+91</span>
-            <input type="text" id="mobile" name="mobile"  />
+            <input type="number" id="phone" name="phone"  />
         </div>
-            
-        <label>Message</label>
-        <textarea id="message" name="message"></textarea>
+		<br/>
+		            
+        <label>Message (Upto 140 characters)</label><br/>
+        <textarea id="msg" name="msg"></textarea>
 
 
         <div class="let">
-            <input type="button" class="button br2up" onclick="return sendMessage();" id="Send" name="Send" value="Send SMS">
+            <input type="submit" class="button" onclick="return sendMessage();" id="Send" name="Send" value="Send SMS">
         </div>
     </div>
 </form>
